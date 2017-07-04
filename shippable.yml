@@ -8,4 +8,4 @@ build:
   pull: false
  ci:
   - (echo stats; echo quit) | nc 127.0.0.1 11211
-  - shippable_service memcached stop
+  
