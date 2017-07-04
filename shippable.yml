@@ -8,4 +8,4 @@ build:
   pull: false
  ci:
   - curl localhost:9200
-  - shippable_service elasticsearch start
+  - shippable_service elasticsearch stop
