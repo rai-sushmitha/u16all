@@ -1,11 +1,11 @@
 language: none
 services:
- - postgres
+ - rabbitmq
 build:
  pre_ci_boot:
   image_name: sushmitharai/latest16
   image_tag: latest
   pull: false
  ci:
-  - sudo su postgres -c "psql -c '\l'"
-  - shippable_service postgres stop
+  - rabbitmqctl status
+  - shippable_service rabbitmq stop
