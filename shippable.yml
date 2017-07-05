@@ -1,11 +1,11 @@
 language: none
 services:
- - mongodb
+ - cassandra
 build:
  pre_ci_boot:
   image_name: sushmitharai/latest16
   image_tag: latest
   pull: false
  ci:
-  - mongo --eval "db.stats()"
-  - shippable_service mongodb stop
+  - cqlsh -e "describe cluster; describe tables"
+  - sippable_service cassandra stop
