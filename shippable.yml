@@ -8,4 +8,4 @@ build:
   pull: false
  ci:
   - curl localhost:5984
-- shippable_service couchdb stop
+  - shippable_service couchdb stop
