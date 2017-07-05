@@ -1,11 +1,11 @@
 language: none
 services:
- - neo4j
+ - postgres
 build:
  pre_ci_boot:
   image_name: sushmitharai/latest16
   image_tag: latest
   pull: false
  ci:
-  - curl localhost:7474
-  - shippable_service neo4j stop
+  - sudo su postgres -c "psql -c '\l'"
+  - shippable_service postgres stop
