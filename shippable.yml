@@ -8,4 +8,4 @@ build:
   pull: false
  ci:
   - cqlsh -e "describe cluster; describe tables"
-  - sippable_service cassandra stop
+  - shippable_service cassandra stop
